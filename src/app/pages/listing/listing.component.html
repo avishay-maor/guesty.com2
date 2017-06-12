@@ -1,0 +1,12 @@
+<h1 class="text-center">{{listing?.listing.name}}</h1>
+<img [src]="listing?.listing.picture_url" alt="">
+<h3 class="text-center">Reviews</h3>
+<ul>
+  <li *ngFor="let review of reviews?.reviews">
+    <h3>{{review.comments}}</h3>
+    <img [src]="review.author.thumbnail_url" alt="" class="pull-left" style="max-width: 50px;">
+    <small>By: {{review.author.first_name}} {{review.author.last_name}}</small>
+    <br>
+    <small>At: {{review.created_at|date:'dd/mm/yy'}}</small>
+  </li>
+</ul>

@@ -1,0 +1,8 @@
+<h1 class="text-center">Lisiting to the city {{cityName}}</h1>
+<ul>
+  <li *ngFor="let item of listing" (click)="goTo(item.listing.id)" class="listing col-md-4 pull-left">
+    <img [src]="item.listing.picture_url" alt="">
+    <h3>{{item.listing.name}}</h3>
+    <h4>{{item.listing.public_address}}</h4>
+  </li>
+</ul>
